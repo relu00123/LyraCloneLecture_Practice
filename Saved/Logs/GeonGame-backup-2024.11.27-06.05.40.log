@@ -1,0 +1,360 @@
+﻿Log file open, 11/27/24 15:04:16
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogProfilingDebugging: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogWindows: Started CrashReportClient (pid=2056)
+LogWindows: Custom abort handler registered for crash reporting.
+LogInit: Display: Running engine for game: GeonGame
+LogCore: UTS: Unreal Trace Server launched successfully
+LogTrace: Initializing trace...
+LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+LogTrace: Display: Display Control listening on port 1985
+LogTrace: Finished trace initialization.
+LogCsvProfiler: Display: Metadata set : platform="Windows"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.5-CL-37670630"
+LogCsvProfiler: Display: Metadata set : engineversion="5.5.0-37670630+++UE5+Release-5.5"
+LogCsvProfiler: Display: Metadata set : os="Windows 11 (23H2) [10.0.22631.4460] "
+LogCsvProfiler: Display: Metadata set : cpu="AuthenticAMD|AMD Ryzen 7 6800H with Radeon Graphics"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : commandline="" "C:\Users\201710881\Documents\Unreal Projects\GeonGame\GeonGame.uproject"""
+LogCsvProfiler: Display: Metadata set : loginid="b23932174ea714210fe051ae01f1d133"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogStats: Stats thread started at 0.369577
+LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
+LogInit: Session CrashGUID >====================================================
+         Session CrashGUID >   UECC-Windows-315161E3452AF4CCAE6CACACDEF8F68B
+         Session CrashGUID >====================================================
+LogConfig: No local boot hotfix file found at: [../../../../../../Users/201710881/Documents/Unreal Projects/GeonGame/Saved/PersistentDownloadDir/HotfixForNextBoot.txt]
+LogAudio: Display: Pre-Initializing Audio Device Manager...
+LogAudio: Display: AudioInfo: 'OPUS' Registered
+LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+LogAudio: Display: AudioInfo: 'OGG' Registered
+LogAudio: Display: AudioInfo: 'ADPCM' Registered
+LogAudio: Display: AudioInfo: 'PCM' Registered
+LogAudio: Display: AudioInfo: 'BINKA' Registered
+LogAudio: Display: AudioInfo: 'RADA' Registered
+LogAudio: Display: Audio Device Manager Pre-Initialized
+LogPluginManager: Looking for build plugins target receipt
+LogPluginManager: Unable to find target receipt in path: ../../../../../../Users/201710881/Documents/Unreal Projects/GeonGame/Binaries/Win64/*.target
+LogConfig: Display: Loading VulkanPC ini files took 0.08 seconds
+LogConfig: Display: Loading Mac ini files took 0.08 seconds
+LogConfig: Display: Loading IOS ini files took 0.08 seconds
+LogConfig: Display: Loading Android ini files took 0.08 seconds
+LogConfig: Display: Loading TVOS ini files took 0.09 seconds
+LogConfig: Display: Loading Unix ini files took 0.09 seconds
+LogConfig: Display: Loading Windows ini files took 0.09 seconds
+LogConfig: Display: Loading VisionOS ini files took 0.09 seconds
+LogConfig: Display: Loading Linux ini files took 0.10 seconds
+LogConfig: Display: Loading LinuxArm64 ini files took 0.10 seconds
+LogPluginManager: Found matching target receipt: ../../../Engine/Binaries/Win64/UnrealEditor.target
+LogPluginManager: Looking for enabled plugins target receipt
+LogPluginManager: Unable to find target receipt in path: ../../../../../../Users/201710881/Documents/Unreal Projects/GeonGame/Binaries/Win64/*.target
+LogPluginManager: Found matching target receipt: ../../../Engine/Binaries/Win64/UnrealEditor.target
+LogPluginManager: Mounting Engine plugin Bridge
+LogPluginManager: Mounting Engine plugin ChaosCloth
+LogPluginManager: Mounting Engine plugin ChaosVD
+LogPluginManager: Mounting Engine plugin CmdLinkServer
+LogPluginManager: Mounting Engine plugin EnhancedInput
+LogPluginManager: Mounting Engine plugin Fab
+LogPluginManager: Mounting Engine plugin FastBuildController
+LogPluginManager: Mounting Engine plugin MeshPainting
+LogPluginManager: Mounting Engine plugin RenderGraphInsights
+LogPluginManager: Mounting Engine plugin TraceUtilities
+LogPluginManager: Mounting Engine plugin UbaController
+LogPluginManager: Mounting Engine plugin WorldMetrics
+LogPluginManager: Mounting Engine plugin XGEController
+LogPluginManager: Mounting Engine plugin DatasmithContent
+LogPluginManager: Mounting Engine plugin GLTFExporter
+LogPluginManager: Mounting Engine plugin VariantManagerContent
+LogPluginManager: Mounting Engine plugin VariantManager
+LogPluginManager: Mounting Engine plugin Niagara
+LogPluginManager: Mounting Engine plugin NiagaraSimCaching
+LogPluginManager: Mounting Engine plugin ActorLayerUtilities
+LogPluginManager: Mounting Engine plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin AndroidMoviePlayer
+LogPluginManager: Mounting Engine plugin AndroidPermission
+LogPluginManager: Mounting Engine plugin AndroidFileServer
+LogPluginManager: Mounting Engine plugin AppleImageUtils
+LogPluginManager: Mounting Engine plugin AppleMoviePlayer
+LogPluginManager: Mounting Engine plugin ArchVisCharacter
+LogPluginManager: Mounting Engine plugin AssetTags
+LogPluginManager: Mounting Engine plugin AudioCapture
+LogPluginManager: Mounting Engine plugin AudioSynesthesia
+LogPluginManager: Mounting Engine plugin ChunkDownloader
+LogPluginManager: Mounting Engine plugin AudioWidgets
+LogPluginManager: Mounting Engine plugin CableComponent
+LogPluginManager: Mounting Engine plugin CustomMeshComponent
+LogPluginManager: Mounting Engine plugin ComputeFramework
+LogPluginManager: Mounting Engine plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin GeometryCache
+LogPluginManager: Mounting Engine plugin GeometryProcessing
+LogPluginManager: Mounting Engine plugin GoogleCloudMessaging
+LogPluginManager: Mounting Engine plugin HairStrands
+LogPluginManager: Mounting Engine plugin GooglePAD
+LogPluginManager: Mounting Engine plugin InputDebugging
+LogPluginManager: Mounting Engine plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin LocationServicesBPLibrary
+LogPluginManager: Mounting Engine plugin MeshModelingToolset
+LogPluginManager: Mounting Engine plugin Metasound
+LogPluginManager: Mounting Engine plugin MobilePatchingUtils
+LogPluginManager: Mounting Engine plugin MsQuic
+LogPluginManager: Mounting Engine plugin ProceduralMeshComponent
+LogPluginManager: Mounting Engine plugin PropertyAccessEditor
+LogPluginManager: Mounting Engine plugin ResonanceAudio
+LogPluginManager: Mounting Engine plugin RigVM
+LogPluginManager: Mounting Engine plugin SignificanceManager
+LogPluginManager: Mounting Engine plugin SoundFields
+LogPluginManager: Mounting Engine plugin StateTree
+LogPluginManager: Mounting Engine plugin Synthesis
+LogPluginManager: Mounting Engine plugin USDCore
+LogPluginManager: Mounting Engine plugin WaveTable
+LogPluginManager: Mounting Engine plugin WebMMoviePlayer
+LogPluginManager: Mounting Engine plugin WindowsDeviceProfileSelector
+LogPluginManager: Mounting Engine plugin WindowsMoviePlayer
+LogPluginManager: Mounting Engine plugin InterchangeAssets
+LogPluginManager: Mounting Engine plugin InterchangeEditor
+LogPluginManager: Mounting Engine plugin Interchange
+LogPluginManager: Mounting Engine plugin AndroidMedia
+LogPluginManager: Mounting Engine plugin AvfMedia
+LogPluginManager: Mounting Engine plugin ImgMedia
+LogPluginManager: Mounting Engine plugin MediaCompositing
+LogPluginManager: Mounting Engine plugin MediaPlate
+LogPluginManager: Mounting Engine plugin MediaPlayerEditor
+LogPluginManager: Mounting Engine plugin WebMMedia
+LogPluginManager: Mounting Engine plugin WmfMedia
+LogPluginManager: Mounting Engine plugin TcpMessaging
+LogPluginManager: Mounting Engine plugin UdpMessaging
+LogPluginManager: Mounting Engine plugin EOSShared
+LogPluginManager: Mounting Engine plugin OnlineBase
+LogPluginManager: Mounting Engine plugin OnlineServices
+LogPluginManager: Mounting Engine plugin OnlineSubsystem
+LogPluginManager: Mounting Engine plugin OnlineSubsystemNull
+LogPluginManager: Mounting Engine plugin OnlineSubsystemUtils
+LogPluginManager: Mounting Engine plugin Takes
+LogPluginManager: Mounting Engine plugin Paper2D
+LogPluginManager: Mounting Engine plugin AISupport
+LogPluginManager: Mounting Engine plugin EnvironmentQueryEditor
+LogPluginManager: Mounting Engine plugin ACLPlugin
+LogPluginManager: Mounting Engine plugin AnimationData
+LogPluginManager: Mounting Engine plugin AnimationModifierLibrary
+LogPluginManager: Mounting Engine plugin BlendSpaceMotionAnalysis
+LogPluginManager: Mounting Engine plugin ControlRig
+LogPluginManager: Mounting Engine plugin ControlRigModules
+LogPluginManager: Mounting Engine plugin ControlRigSpline
+LogPluginManager: Mounting Engine plugin DeformerGraph
+LogPluginManager: Mounting Engine plugin IKRig
+LogPluginManager: Mounting Engine plugin LiveLink
+LogPluginManager: Mounting Engine plugin CameraShakePreviewer
+LogPluginManager: Mounting Engine plugin RigLogic
+LogPluginManager: Mounting Engine plugin EngineCameras
+LogPluginManager: Mounting Engine plugin GameplayCameras
+LogPluginManager: Mounting Engine plugin OodleNetwork
+LogPluginManager: Mounting Engine plugin AnimationSharing
+LogPluginManager: Mounting Engine plugin CLionSourceCodeAccess
+LogPluginManager: Mounting Engine plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting Engine plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting Engine plugin DumpGPUServices
+LogPluginManager: Mounting Engine plugin GitSourceControl
+LogPluginManager: Mounting Engine plugin N10XSourceCodeAccess
+LogPluginManager: Mounting Engine plugin NullSourceCodeAccess
+LogPluginManager: Mounting Engine plugin PerforceSourceControl
+LogPluginManager: Mounting Engine plugin PixWinPlugin
+LogPluginManager: Mounting Engine plugin PlasticSourceControl
+LogPluginManager: Mounting Engine plugin PluginUtils
+LogPluginManager: Mounting Engine plugin RenderDocPlugin
+LogPluginManager: Mounting Engine plugin PropertyAccessNode
+LogPluginManager: Mounting Engine plugin RiderSourceCodeAccess
+LogPluginManager: Mounting Engine plugin TextureFormatOodle
+LogPluginManager: Mounting Engine plugin SubversionSourceControl
+LogPluginManager: Mounting Engine plugin UObjectPlugin
+LogPluginManager: Mounting Engine plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting Engine plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting Engine plugin AssetManagerEditor
+LogPluginManager: Mounting Engine plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting Engine plugin BlueprintHeaderView
+LogPluginManager: Mounting Engine plugin ChangelistReview
+LogPluginManager: Mounting Engine plugin ColorGrading
+LogPluginManager: Mounting Engine plugin CryptoKeys
+LogPluginManager: Mounting Engine plugin CurveEditorTools
+LogPluginManager: Mounting Engine plugin DataValidation
+LogPluginManager: Mounting Engine plugin EditorDebugTools
+LogPluginManager: Mounting Engine plugin EditorScriptingUtilities
+LogPluginManager: Mounting Engine plugin EngineAssetDefinitions
+LogPluginManager: Mounting Engine plugin GameplayTagsEditor
+LogPluginManager: Mounting Engine plugin FacialAnimation
+LogPluginManager: Mounting Engine plugin GeometryMode
+LogPluginManager: Mounting Engine plugin MacGraphicsSwitching
+LogPluginManager: Mounting Engine plugin MaterialAnalyzer
+LogPluginManager: Mounting Engine plugin MeshLODToolset
+LogPluginManager: Mounting Engine plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting Engine plugin ModelingToolsEditorMode
+LogPluginManager: Mounting Engine plugin PluginBrowser
+LogPluginManager: Mounting Engine plugin ProxyLODPlugin
+LogPluginManager: Mounting Engine plugin SequencerAnimTools
+LogPluginManager: Mounting Engine plugin SpeedTreeImporter
+LogPluginManager: Mounting Engine plugin StylusInput
+LogPluginManager: Mounting Engine plugin UMGWidgetPreview
+LogPluginManager: Mounting Engine plugin UVEditor
+LogPluginManager: Mounting Engine plugin WorldPartitionHLODUtilities
+LogPluginManager: Mounting Engine plugin AdvancedRenamer
+LogPluginManager: Mounting Engine plugin AutomationUtils
+LogPluginManager: Mounting Engine plugin BackChannel
+LogPluginManager: Mounting Engine plugin ChaosCaching
+LogPluginManager: Mounting Engine plugin ChaosEditor
+LogPluginManager: Mounting Engine plugin ChaosNiagara
+LogPluginManager: Mounting Engine plugin ChaosSolverPlugin
+LogPluginManager: Mounting Engine plugin ChaosUserDataPT
+LogPluginManager: Mounting Engine plugin CharacterAI
+LogPluginManager: Mounting Engine plugin Dataflow
+LogPluginManager: Mounting Engine plugin EditorDataStorage
+LogPluginManager: Mounting Engine plugin EditorPerformance
+LogPluginManager: Mounting Engine plugin EditorTelemetry
+LogPluginManager: Mounting Engine plugin Fracture
+LogPluginManager: Mounting Engine plugin FullBodyIK
+LogPluginManager: Mounting Engine plugin GeometryCollectionPlugin
+LogPluginManager: Mounting Engine plugin GeometryFlow
+LogPluginManager: Mounting Engine plugin LocalizableMessage
+LogPluginManager: Mounting Engine plugin LowLevelNetTrace
+LogPluginManager: Mounting Engine plugin MeshModelingToolsetExp
+LogPluginManager: Mounting Engine plugin NFORDenoise
+LogPluginManager: Mounting Engine plugin PlanarCut
+LogPluginManager: Mounting Engine plugin PlatformCrypto
+LogPluginManager: Mounting Engine plugin PythonScriptPlugin
+LogPluginManager: Mounting Engine plugin SkeletalReduction
+LogPluginManager: Mounting Engine plugin StudioTelemetry
+LogPluginManager: Mounting Engine plugin ToolPresets
+LogPluginManager: Mounting Engine plugin AlembicImporter
+LogPluginManager: Mounting Engine plugin ActorSequence
+LogPluginManager: Mounting Engine plugin LevelSequenceEditor
+LogPluginManager: Mounting Engine plugin SequencerScripting
+LogPluginManager: Mounting Engine plugin TemplateSequence
+LogPluginManager: Mounting Engine plugin NNEDenoiser
+LogPluginManager: Mounting Engine plugin NNERuntimeORT
+LogPluginManager: Mounting Engine plugin LauncherChunkInstaller
+LogPluginManager: Mounting Engine plugin InterchangeTests
+LogPluginManager: Mounting Engine plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting Engine plugin SkeletalMeshModelingTools
+LogPluginManager: Mounting Engine plugin SQLiteCore
+LogPluginManager: Mounting Engine plugin ConcertMain
+LogPluginManager: Mounting Engine plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting Engine plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting Engine plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting Engine plugin PortableObjectFileDataSource
+LogPluginManager: Mounting Engine plugin XInputDevice
+LogPluginManager: Mounting Engine plugin MetaHumanSDK
+LogPluginManager: Mounting Engine plugin OnlineSubsystemIOS
+LogPluginManager: Mounting Engine plugin LightMixer
+LogPluginManager: Mounting Engine plugin ObjectMixer
+LogPluginManager: Mounting Engine plugin BaseCharacterFXEditor
+LogPluginManager: Mounting Engine plugin HoldoutComposite
+LogPluginManager: Mounting Engine plugin ConcertSyncCore
+LogPluginManager: Mounting Engine plugin ConcertSyncClient
+SourceControl: Revision control is disabled
+SourceControl: Revision control is disabled
+SourceControl: Revision control is disabled
+LogInit: Warning: Incompatible or missing module: GeonGame
+Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat Development Win64 -Project="C:/Users/201710881/Documents/Unreal Projects/GeonGame/GeonGame.uproject" -TargetType=Editor -Progress -NoEngineChanges -NoHotReloadFromIDE
+Using bundled DotNet SDK version: 8.0.300
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Development Win64 -Project="C:/Users/201710881/Documents/Unreal Projects/GeonGame/GeonGame.uproject" -TargetType=Editor -Progress -NoEngineChanges -NoHotReloadFromIDE
+Log file: C:\Users\201710881\AppData\Local\UnrealBuildTool\Log.txt
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433
+    (Family=14.42.34433, FamilyRank=1, Version=14.42.34433, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+Unavailable x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629
+    (Family=14.33.31629, FamilyRank=1, Version=14.33.31631, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64, Error="UnrealBuildTool requires at minimum the MSVC 14.38.33130 toolchain. Please install a later toolchain such as 14.38.33130 from the Visual Studio installer.")
+Visual Studio 2022 compiler version 14.42.34433 is not a preferred version. Please use the latest preferred version 14.38.33130
+Creating makefile for GeonGameEditor (no existing makefile)
+@progress push 5%
+Parsing headers for GeonGameEditor
+  Running Internal UnrealHeaderTool "C:\Users\201710881\Documents\Unreal Projects\GeonGame\GeonGame.uproject" "C:\Users\201710881\Documents\Unreal Projects\GeonGame\Intermediate\Build\Win64\GeonGameEditor\Development\GeonGameEditor.uhtmanifest" -WarningsAsErrors -installed
+Total of 12 written
+Reflection code generated for GeonGameEditor in 2.0287748 seconds
+@progress pop
+Building GeonGameEditor...
+Using Visual Studio 2022 14.42.34433 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio 2022 compiler is not a preferred version
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+  Requested 1.5 GB memory per action, 5.34 GB available: limiting max parallel actions to 3
+Using Unreal Build Accelerator local executor to run 19 action(s)
+  Storage capacity 40Gb
+---- Starting trace: 241127_150434 ----
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+------ Building 19 action(s) started ------
+[1/19] Resource Default.rc2
+UbaSessionServer - Allocation failed in MapViewOfFile (The paging file is too small for this operation to complete.).. process will sleep and try again
+UbaSessionServer - Allocation failed in MapViewOfFile (The paging file is too small for this operation to complete.).. process will sleep and try again
+[2/19] Compile [x64] SharedPCH.UnrealEd.Project.ValApi.Cpp20.cpp
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(940): warning C4996: 'FBoneMirrorInfo': FBoneMirrorInfo is deprecated. Please use UMirrorDataTable for mirroring support. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[3/19] Compile [x64] GeonExperienceDefinition.cpp
+[4/19] Compile [x64] GeonExperienceDefinition.gen.cpp
+[5/19] Compile [x64] GeonGame.cpp
+[6/19] Compile [x64] GeonGame.init.gen.cpp
+[7/19] Compile [x64] GeonGameModeBase.cpp
+[8/19] Compile [x64] GeonGameModeBase.gen.cpp
+[9/19] Compile [x64] GeonLogChannels.cpp
+[10/19] Compile [x64] GeonPawnData.cpp
+[11/19] Compile [x64] GeonPawnData.gen.cpp
+[12/19] Compile [x64] GeonUserFacingExperience.cpp
+[13/19] Compile [x64] GeonUserFacingExperience.gen.cpp
+[14/19] Compile [x64] PerModuleInline.gen.cpp
+[15/19] Compile [x64] GeonAssetManager.cpp
+C:\Users\201710881\Documents\Unreal Projects\GeonGame\Source\GeonGame\System\GeonAssetManager.cpp(49): warning C4996: 'UAssetManager::IsValid': AssetManager is now always constructed during UEngine::InitializeObjectReferences. Call IsInitialized instead if you need to check whether it has not yet been initialized. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): error C2665: 'FScopeLogTime::FScopeLogTime': ?? ??????? ??ȯ? ?????????? ??????ϴ?
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Stats\StatsMisc.h(193): note: 'FScopeLogTime::FScopeLogTime(const ANSICHAR *,FTotalTimeAndCount *,FConditionalScopeLogTime::EScopeLogTimeUnits)'? ?????ϴ?
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: 'FScopeLogTime::FScopeLogTime(const ANSICHAR *,FTotalTimeAndCount *,FConditionalScopeLogTime::EScopeLogTimeUnits)': ???1?(??) 'T'???? 'const ANSICHAR *'(?)????ȯ? ?????ϴ?
+        with
+        [
+            T=const TCHAR *
+        ]
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: ????Ų ??????? ???ϴ? ??ȯ????reinterpret_cast, C ??Ÿ? ĳ??Ʈ ?Ǵ?????? ????????Ÿ? ĳ??Ʈ?? ???մϴ?
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Stats\StatsMisc.h(188): note: ?Ǵ?      'FScopeLogTime::FScopeLogTime(const WIDECHAR *,FTotalTimeAndCount *,FConditionalScopeLogTime::EScopeLogTimeUnits)'
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: 'FScopeLogTime::FScopeLogTime(const WIDECHAR *,FTotalTimeAndCount *,FConditionalScopeLogTime::EScopeLogTimeUnits)': ???2?(??) 'T'???? 'FTotalTimeAndCount *'(?)????ȯ? ?????ϴ?
+        with
+        [
+            T=FConditionalScopeLogTime::EScopeLogTimeUnits
+        ]
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: ????迭 ??Ŀ??? ??? ????????ȯ????reinterpret_cast, C ??Ÿ? ĳ??Ʈ ?Ǵ?????? ????????Ÿ? ĳ??Ʈ?? ???մϴ?
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: ????? '(T, T)'?(??) ?ġ?????????
+        with
+        [
+            T=const TCHAR *
+        ]
+        and
+        [
+            T=FConditionalScopeLogTime::EScopeLogTimeUnits
+        ]
+C:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\Core\Public\Templates\UniquePtr.h(798): note: ???? ??????ȭ ????Ʈ(??? ???????????ȭ ????Ʈ)??
+C:\Users\201710881\Documents\Unreal Projects\GeonGame\Source\GeonGame\System\GeonAssetManager.cpp(42): note: ????Ǵ???????? ??????ȭ 'TUniquePtr<FScopeLogTime,TDefaultDelete<T>> MakeUnique<FScopeLogTime,const FString::ElementType*,FConditionalScopeLogTime::EScopeLogTimeUnits>(const FString::ElementType *&&,FConditionalScopeLogTime::EScopeLogTimeUnits &&)'?? ??????? Ȯ??????
+        with
+        [
+            T=FScopeLogTime
+        ]
+[16/19] Compile [x64] GeonAssetManager.gen.cpp
+Trace file written to C:/Users/201710881/AppData/Local/UnrealBuildTool/Log.uba with size 12.0kb
+Total time in Unreal Build Accelerator local executor: 60.51 seconds
+Total execution time: 75.51 seconds
+LogInit: Warning: Still incompatible or missing module: GeonGame
+LogCore: Engine exit requested (reason: EngineExit() was called)
+LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: )...
+LogAudio: Display: Audio Device Manager Shutdown
+LogExit: Preparing to exit.
+LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+LogXGEController: Cleaning working directory: C:/Users/201710881/AppData/Local/Temp/UnrealXGEWorkingDir/
+LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+LogPakFile: Destroying PakPlatformFile
+LogExit: Exiting.
+Log file closed, 11/27/24 15:05:40
