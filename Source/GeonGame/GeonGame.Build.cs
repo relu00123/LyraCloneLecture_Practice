@@ -8,7 +8,17 @@ public class GeonGame : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] {
+			"Core", 
+			"CoreUObject", 
+			"Engine", 
+			"InputCore", 
+			// GAS
+			"GameplayTags",
+			// Game Features
+			"EnhancedInput",
+			"ModularGameplay"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

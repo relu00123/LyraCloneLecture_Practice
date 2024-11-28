@@ -13,5 +13,15 @@ UCLASS()
 class GEONGAME_API AGeonGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	AGeonGameModeBase(); 
 	
+	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
+
+	/*
+	* member methods
+	*/
+	void HandleMatchAssignmentIfNotExpectingOne();
+
 };
