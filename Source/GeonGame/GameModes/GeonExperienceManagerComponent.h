@@ -36,6 +36,13 @@ public:
 	// 아래의 OnExperienceLoaded에 바인딩하거나, 이미 Experience 로딩이 완료되었다면 바로 호출함
 	void CallOrRegister_OnExperienceLoaded(FOnGeonExperienceLoaded::FDelegate&& Delegate);
 
+	void ServerSetCurrentExperience(FPrimaryAssetId ExperienceId);
+	void StartExperienceLoad();
+	void OnExperienceLoadComplete();
+	void OnExperienceFullLoadCompleted();
+
+
+
 public:
 	UPROPERTY()
 	TObjectPtr<const UGeonExperienceDefinition> CurrentExperience;

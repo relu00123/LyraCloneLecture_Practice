@@ -16,6 +16,7 @@ UGeonAssetManager& UGeonAssetManager::Get()
 	// 우리는 AssetManager를 UEngine의 GEngine의 AssetManager의 Class를 오버라이드 했기 때문에, GEngine에 Asset Manager아 있음
 	if (UGeonAssetManager* Singleton = Cast<UGeonAssetManager>(GEngine->AssetManager))
 	{
+		UE_LOG(LogGeon, Log, TEXT("AssetManager successfully casted: %s"), *Singleton->GetName());
 		return *Singleton; // 역참조를 통해 실제 객체를 반환한다. 
 	}
 

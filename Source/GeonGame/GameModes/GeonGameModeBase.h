@@ -33,6 +33,7 @@ public:
 	* member methods
 	*/
 	void HandleMatchAssignmentIfNotExpectingOne();
+	void OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId);
 	bool IsExperienceLoaded() const; 
 	void OnExperienceLoaded(const UGeonExperienceDefinition* CurrentExperience);
 

@@ -62,6 +62,40 @@ void AGeonGameModeBase::HandleMatchAssignmentIfNotExpectingOne()
 	// 이런것을 검사한 후에 Experience를 Loading해달라고 요청한다	
 	// 그렇기 때문에 이름이 HandleMatchAssignment임... (우리랑은 크게 관련 x) 
 
+	// 해당 함수에서는 우리가 로딩할 Experience에 대해 PrimaryAssetId를 생성하여, OnMatchAssignmentGiven으로 넘겨준다
+
+	FPrimaryAssetId ExperienceId;
+
+	// precedence order (highest wins)
+	// - matchmaking assignment (if present)
+	// - default experience
+
+	UWorld* World = GetWorld();
+
+	// fall back to the default experience
+	// 일단 기본 옵션으로 default하게 B_HakDefaultExperience로 설정놓자
+	if (!ExperienceId.IsValid())
+	{
+		// 강의 코드는 B_GeonDefaultExperience로 적여있는데 아무리봐도 B_LyraDefaultExperience가 맞는데..?
+		ExperienceId = FPrimaryAssetId(FPrimaryAssetType("GeonExperienceDefinition"), FName("B_GeonDefaultExperience"));
+		//ExperienceId = FPrimaryAssetId(FPrimaryAssetType("GeonExperienceDefinition"), FName("B_LyraDefaultExperience"));
+	}
+
+	// 필자가 이해한 HandleMatchAssignmentIfNotExpectingOne과 OnMatchAssignmentGiven()은 아직 직관적으로 이름이 와닫지 않는다고 생각한다
+	// - 후일, 어느정도 Lyra가 구현되면, 해당 함수의 명을 더 이해할 수 있을 것으로 예상한다
+	OnMatchAssignmentGiven(ExperienceId);
+
+}
+
+void AGeonGameModeBase::OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId)
+{
+	// 해당 함수는 ExperienceManagerComponent을 활용하여 Experience을 로딩하기 위해, ExperienceManagerComponent의 ServerSetCurrentExperience를 호출한다
+
+	check(ExperienceId.IsValid());
+
+	UGeonExperienceManagerComponent* ExperienceManagerComponent = GameState->FindComponentByClass<UGeonExperienceManagerComponent>();
+	check(ExperienceManagerComponent);
+	ExperienceManagerComponent->ServerSetCurrentExperience(ExperienceId);
 }
 
 bool AGeonGameModeBase::IsExperienceLoaded() const

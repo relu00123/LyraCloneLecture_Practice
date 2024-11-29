@@ -15,7 +15,7 @@ public class GeonGame : ModuleRules
 			"InputCore", 
 			// GAS
 			"GameplayTags",
-			// Game Features
+			"GameFeatures",
 			"EnhancedInput",
 			"ModularGameplay"
 		});
