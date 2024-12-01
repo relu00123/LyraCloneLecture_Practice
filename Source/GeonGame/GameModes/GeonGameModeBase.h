@@ -6,6 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "GeonGameModeBase.generated.h"
 
+class UGeonPawnData;
 class UGeonExperienceDefinition;
 /**
  * 
@@ -22,6 +23,8 @@ public:
 
 	virtual void InitGameState() final;
 
+	/** GetDefaultPawnClassForController */
+	virtual UClass* GetDefaultPawnClassForController_Implementation(AController* InController) final;
 
 	/** HandleStartingNewPlayer */
 	virtual void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) final;
@@ -36,5 +39,6 @@ public:
 	void OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId);
 	bool IsExperienceLoaded() const; 
 	void OnExperienceLoaded(const UGeonExperienceDefinition* CurrentExperience);
+	const UGeonPawnData* GetPawnDataForController(const AController* InController) const;
 
 };

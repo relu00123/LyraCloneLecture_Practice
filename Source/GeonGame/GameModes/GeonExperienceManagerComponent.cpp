@@ -132,3 +132,10 @@ void UGeonExperienceManagerComponent::OnExperienceFullLoadCompleted()
 	OnExperienceLoaded.Clear(); // Delegate였음. 로딩이 완료가 되면 바로 실행 아니라면 델리게이트 신청해 줬었음 
 	// 두군대를 걸어 줬었는데 AGeonGameModeBase::
 }
+
+const UGeonExperienceDefinition* UGeonExperienceManagerComponent::GetCurrentExperienceChecked() const
+{
+	check(LoadState == EGeonExperienceLoadState::Loaded);
+	check(CurrentExperience != nullptr);
+	return CurrentExperience;
+}

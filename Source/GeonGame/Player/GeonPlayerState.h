@@ -21,8 +21,13 @@ public:
 	// AActor's interface
 	virtual void PostInitializeComponents() final;
 
+	template <class T>
+	const T* GetPawnData() const { return Cast<T>(PawnData); }
+
 	// member methods
 	void OnExperienceLoaded(const UGeonExperienceDefinition* CurrentExperience);
+
+	void SetPawnData(const UGeonPawnData* InPawnData);
 
 	UPROPERTY()
 	TObjectPtr<const UGeonPawnData> PawnData;	

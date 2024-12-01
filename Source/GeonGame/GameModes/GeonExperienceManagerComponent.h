@@ -40,6 +40,7 @@ public:
 	void StartExperienceLoad();
 	void OnExperienceLoadComplete();
 	void OnExperienceFullLoadCompleted();
+	const UGeonExperienceDefinition* GetCurrentExperienceChecked() const; 
 
 
 
