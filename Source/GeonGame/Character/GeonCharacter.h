@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "GeonCharacter.generated.h"
 
+class UGeonPawnExtensionComponent;
+
 UCLASS()
 class GEONGAME_API AGeonCharacter : public ACharacter
 {
@@ -25,5 +27,9 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hak|Character")
+	TObjectPtr<UGeonPawnExtensionComponent> PawnExtComponent;
 
 };

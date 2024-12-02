@@ -2,13 +2,17 @@
 
 
 #include "GeonCharacter.h"
+#include "GeonPawnExtensionComponent.h"
 
 // Sets default values
 AGeonCharacter::AGeonCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bStartWithTickEnabled = false; 
 
+	// PawnExtComponent »ý¼º
+	PawnExtComponent = CreateDefaultSubobject<UGeonPawnExtensionComponent>(TEXT("PawnExtensionComponent"));
 }
 
 // Called when the game starts or when spawned
