@@ -3,6 +3,8 @@
 
 #include "GeonAssetManager.h"
 #include "GeonGame/GeonLogChannels.h"
+#include "GeonGame/GeonGameplayTags.h"
+
  
 
 UGeonAssetManager::UGeonAssetManager()
@@ -30,6 +32,8 @@ PRAGMA_DISABLE_OPTIMIZATION
 void UGeonAssetManager::StartInitialLoading()
 {
 	Super::StartInitialLoading();
+
+	FGeonGameplayTags::InitializeNativeTags();
 }
 PRAGMA_ENABLE_OPTIMIZATION
 
