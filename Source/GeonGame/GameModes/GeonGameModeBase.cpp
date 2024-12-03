@@ -10,6 +10,7 @@
 #include "GeonExperienceManagerComponent.h"
 #include "GeonGame/GameModes/GeonExperienceDefinition.h"
 #include "GeonGame/Character/GeonPawnData.h"
+#include "GeonGame/Character/GeonPawnExtensionComponent.h"
 
 AGeonGameModeBase::AGeonGameModeBase()
 {
@@ -68,8 +69,33 @@ void AGeonGameModeBase::HandleStartingNewPlayer_Implementation(APlayerController
 
 APawn* AGeonGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, const FTransform& SpawnTransform)
 {
-	UE_LOG(LogGeon, Log, TEXT("SpawnDefaultPawnAtTransform_Implementation is called!"));
-	return Super::SpawnDefaultPawnAtTransform_Implementation(NewPlayer, SpawnTransform);
+	//UE_LOG(LogGeon, Log, TEXT("SpawnDefaultPawnAtTransform_Implementation is called!"));
+	//return Super::SpawnDefaultPawnAtTransform_Implementation(NewPlayer, SpawnTransform);
+
+	FActorSpawnParameters SpawnInfo;
+	SpawnInfo.Instigator = GetInstigator();
+	SpawnInfo.ObjectFlags |= RF_Transient;
+	SpawnInfo.bDeferConstruction = true;
+
+	if (UClass* PawnClass = GetDefaultPawnClassForController(NewPlayer))
+	{
+		if (APawn* SpawnedPawn = GetWorld()->SpawnActor<APawn>(PawnClass, SpawnTransform, SpawnInfo))
+		{
+			// FindPawnExtensionComponent ±¸Çö
+			if (UGeonPawnExtensionComponent* PawnExtComp = UGeonPawnExtensionComponent::FindPawnExtensionComponent(SpawnedPawn))
+			{
+				if (const UGeonPawnData* PawnData = GetPawnDataForController(NewPlayer))
+				{
+					PawnExtComp->SetPawnData(PawnData);
+				}
+			}
+
+			SpawnedPawn->FinishSpawning(SpawnTransform);
+			return SpawnedPawn;
+		}
+	}
+
+	return nullptr;
 }
 
 void AGeonGameModeBase::HandleMatchAssignmentIfNotExpectingOne()
