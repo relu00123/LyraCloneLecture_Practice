@@ -34,6 +34,12 @@ void UGeonPawnExtensionComponent::SetPawnData(const UGeonPawnData* InPawnData)
 	PawnData = InPawnData;
 }
 
+void UGeonPawnExtensionComponent::SetupPlayerInputComponent()
+{
+	// ForceUpdate로 다시 InitState 상태 변환 시작 (연결 고리)
+	CheckDefaultInitialization();
+}
+
 void UGeonPawnExtensionComponent::OnRegister()
 {
 	Super::OnRegister();

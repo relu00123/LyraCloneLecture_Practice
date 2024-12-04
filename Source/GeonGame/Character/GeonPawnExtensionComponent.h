@@ -29,6 +29,7 @@ public:
 	template <class T>
 	const T* GetPawnData() const { return Cast<T>(PawnData); }
 	void SetPawnData(const UGeonPawnData* InPawnData);
+	void SetupPlayerInputComponent();
 
 
 	// UPawnComponent interfaces

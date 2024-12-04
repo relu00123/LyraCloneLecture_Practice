@@ -34,5 +34,7 @@ void AGeonCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// Pawn이 Possess됨으로써 , Controller와 PlayerState 정보 접근이 가능한 상태가 되었다.
+	PawnExtComponent->SetupPlayerInputComponent();
 }
 

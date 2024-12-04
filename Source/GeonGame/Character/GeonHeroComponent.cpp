@@ -7,6 +7,7 @@
 #include "GeonGame/GeonGameplayTags.h"
 #include "GeonGame/Player/GeonPlayerState.h"
 #include "Components/GameFrameworkComponentManager.h"
+#include "GeonGame/Character/GeonPawnData.h"
 
 /** FeatureName 정의: static member variable 초기화 */
 const FName UGeonHeroComponent::NAME_ActorFeatureName("Hero");
@@ -115,7 +116,29 @@ bool UGeonHeroComponent::CanChangeInitState(UGameFrameworkComponentManager* Mana
 
 void UGeonHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState)
 {
-	IGameFrameworkInitStateInterface::HandleChangeInitState(Manager, CurrentState, DesiredState);
+	const FGeonGameplayTags& InitTags = FGeonGameplayTags::Get();
+
+	// DataAvailable -> DataInitialized 단계
+	if (CurrentState == InitTags.InitState_DataAvailable && DesiredState == InitTags.InitState_DataInitialized)
+	{
+		APawn* Pawn = GetPawn<APawn>();
+		AGeonPlayerState* GeonPS = GetPlayerState<AGeonPlayerState>();
+		if (!ensure(Pawn && GeonPS))
+		{
+			return;
+		}
+
+		// Input과 Camera에 대한 핸들링... (TODO)
+
+		const bool bIsLocallyControlled = Pawn->IsLocallyControlled();
+		const UGeonPawnData* PawnData = nullptr;
+		if (UGeonPawnExtensionComponent* PawnExtComp = UGeonPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
+		{
+			PawnData = PawnExtComp->GetPawnData<UGeonPawnData>();
+		}
+
+		// Camera에 대한 Handling을 해볼 것임.. 	 
+	}
 }
 
 void UGeonHeroComponent::CheckDefaultInitialization()
