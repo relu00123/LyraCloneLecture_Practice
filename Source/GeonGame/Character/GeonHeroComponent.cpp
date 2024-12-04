@@ -8,6 +8,7 @@
 #include "GeonGame/Player/GeonPlayerState.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "GeonGame/Character/GeonPawnData.h"
+#include "GeonGame/Camera/GeonCameraComponent.h"
 
 /** FeatureName 정의: static member variable 초기화 */
 const FName UGeonHeroComponent::NAME_ActorFeatureName("Hero");
@@ -61,7 +62,7 @@ void UGeonHeroComponent::OnActorInitStateChanged(const FActorInitStateChangedPar
 
 	if (Params.FeatureName == UGeonPawnExtensionComponent::NAME_ActorFeatureName)
 	{
-		// HakPawnExtensionComponent의 DataInitialized 상태 변화 관찰 후, HakHeroComponent도 DataInitialized 상태로 변경
+		// GeonPawnExtensionComponent의 DataInitialized 상태 변화 관찰 후, GeonHeroComponent도 DataInitialized 상태로 변경
 		// - CanChangeInitState 확인
 		if (Params.FeatureState == InitTags.InitState_DataInitialized)
 		{
@@ -137,7 +138,15 @@ void UGeonHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* M
 			PawnData = PawnExtComp->GetPawnData<UGeonPawnData>();
 		}
 
-		// Camera에 대한 Handling을 해볼 것임.. 	 
+		// Camera에 대한 Handling
+		if (bIsLocallyControlled && PawnData)
+		{
+			// 현재 GeonCharacter에 Attach된 CameraComponent를 찾음
+			if (UGeonCameraComponent* CameraComponent = UGeonCameraComponent::FindCameraComponent(Pawn))
+			{
+				CameraComponent->DetermineCameraModeDelegate.BindUObject(this, &ThisClass::DetermineCameraMode);
+			}
+		}
 	}
 }
 
@@ -150,3 +159,25 @@ void UGeonHeroComponent::CheckDefaultInitialization()
 	static const TArray<FGameplayTag> StateChain = { InitTags.InitState_Spawned, InitTags.InitState_DataAvailable, InitTags.InitState_DataInitialized, InitTags.InitState_GameplayReady };
 	ContinueInitStateChain(StateChain);
 }
+
+PRAGMA_DISABLE_OPTIMIZATION
+TSubclassOf<UGeonCameraMode> UGeonHeroComponent::DetermineCameraMode() const
+{
+	const APawn* Pawn = GetPawn<APawn>();
+	if (!Pawn)
+	{
+		return nullptr;
+	}
+
+	if (UGeonPawnExtensionComponent* PawnExtComp = UGeonPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
+	{
+		if (const UGeonPawnData* PawnData = PawnExtComp->GetPawnData<UGeonPawnData>())
+		{
+			return PawnData->DefaultCameraMode;
+		}
+	}
+
+	return nullptr;
+}
+PRAGMA_ENABLE_OPTIMIZATION
+

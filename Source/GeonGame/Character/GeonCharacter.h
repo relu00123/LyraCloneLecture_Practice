@@ -7,6 +7,7 @@
 #include "GeonCharacter.generated.h"
 
 class UGeonPawnExtensionComponent;
+class UGeonCameraComponent;
 
 UCLASS()
 class GEONGAME_API AGeonCharacter : public ACharacter
@@ -29,7 +30,12 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Hak|Character")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Geon|Character")
 	TObjectPtr<UGeonPawnExtensionComponent> PawnExtComponent;
+	
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Geon|Character")
+	TObjectPtr<UGeonCameraComponent> CameraComponent;
+
 
 };

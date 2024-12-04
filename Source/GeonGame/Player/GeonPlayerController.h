@@ -13,5 +13,9 @@ UCLASS()
 class GEONGAME_API AGeonPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+public:
+	AGeonPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
 	
 };

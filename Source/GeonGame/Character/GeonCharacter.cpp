@@ -3,6 +3,7 @@
 
 #include "GeonCharacter.h"
 #include "GeonPawnExtensionComponent.h"
+#include "GeonGame/Camera/GeonCameraComponent.h"
 
 // Sets default values
 AGeonCharacter::AGeonCharacter()
@@ -13,6 +14,12 @@ AGeonCharacter::AGeonCharacter()
 
 	// PawnExtComponent 持失
 	PawnExtComponent = CreateDefaultSubobject<UGeonPawnExtensionComponent>(TEXT("PawnExtensionComponent"));
+
+	// CameraComponent 持失
+	{
+		CameraComponent = CreateDefaultSubobject<UGeonCameraComponent>(TEXT("CameraComponent"));
+		CameraComponent->SetRelativeLocation(FVector(-300.0f, 0.0f, 75.0f));
+	}
 }
 
 // Called when the game starts or when spawned

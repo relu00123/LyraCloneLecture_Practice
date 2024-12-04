@@ -6,6 +6,8 @@
 #include "Engine/DataAsset.h"
 #include "GeonPawnData.generated.h"
 
+
+class UGeonCameraMode;
 /**
  * 
  */
@@ -19,4 +21,9 @@ public:
 	// Pawn¿« Class
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Geon|Pawn")
 	TSubclassOf<APawn> PawnClass;
+
+	// Camera Mode
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Geon|Camera")
+	TSubclassOf<UGeonCameraMode> DefaultCameraMode;
+
 };

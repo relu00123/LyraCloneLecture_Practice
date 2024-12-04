@@ -7,6 +7,8 @@
 #include "Components/PawnComponent.h"
 #include "GeonHeroComponent.generated.h"
 
+class UGeonCameraMode;
+
 /**
   카메라, 입력 등 플레이어가 제어하는 시스템의 초기화를 처리하는 컴포넌트 
  */
@@ -33,4 +35,6 @@ public:
 	virtual void HandleChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) final;
 	virtual void CheckDefaultInitialization() final;
 	
+	// Member methods
+	TSubclassOf<UGeonCameraMode> DetermineCameraMode() const;
 };
