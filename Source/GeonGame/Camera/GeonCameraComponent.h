@@ -28,6 +28,7 @@ public:
 	static UGeonCameraComponent* FindCameraComponent(const AActor* Actor) { return (Actor ? Actor->FindComponentByClass<UGeonCameraComponent>() : nullptr); }
 
 	// Member Methods 
+	AActor* GetTargetActor() const { return GetOwner(); }
 	void UpdateCameraModes();
 
 	// CameraComponent interface

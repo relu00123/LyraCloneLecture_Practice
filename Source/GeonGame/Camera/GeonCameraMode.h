@@ -53,14 +53,14 @@ public:
 	/**
 	 * member methods
 	 */
-	/*void UpdateCameraMode(float DeltaTime);
+	void UpdateCameraMode(float DeltaTime);
 	virtual void UpdateView(float DeltaTime);
 	void UpdateBlending(float DeltaTime);
 
 	UGeonCameraComponent* GetGeonCameraComponent() const;
 	AActor* GetTargetActor() const;
 	FVector GetPivotLocation() const;
-	FRotator GetPivotRotation() const;*/
+	FRotator GetPivotRotation() const;
 
 
 	/**
@@ -115,11 +115,11 @@ public:
 	/**
 	 * member variables
 	 */
-	//UGeonCameraMode* GetCameraModeInstance(TSubclassOf<UGeonCameraMode>& CameraModeClass);
-	//void PushCameraMode(TSubclassOf<UGeonCameraMode>& CameraModeClass);
-	//void EvaluateStack(float DeltaTime, FGeonCameraModeView& OutCameraModeView);
-	//void UpdateStack(float DeltaTime);
-	//void BlendStack(FGeonCameraModeView& OutCameraModeView) const;
+	UGeonCameraMode* GetCameraModeInstance(TSubclassOf<UGeonCameraMode>& CameraModeClass);
+	void PushCameraMode(TSubclassOf<UGeonCameraMode>& CameraModeClass);
+	void EvaluateStack(float DeltaTime, FGeonCameraModeView& OutCameraModeView);
+	void UpdateStack(float DeltaTime);
+	void BlendStack(FGeonCameraModeView& OutCameraModeView) const;
 
 	/**
 	* member variables

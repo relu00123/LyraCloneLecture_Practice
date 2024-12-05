@@ -24,6 +24,11 @@ void UGeonCameraComponent::GetCameraView(float DeltaTime, FMinimalViewInfo& Desi
 	check(CameraModeStack);
 
 	UpdateCameraModes();
+
+	// EvaluateStack은 CameraModeStack에 있는 CameraMode를 업데이트(+블랜딩)하고 CameraModeStack을 Bottom-Top까지 업데이트된 CameraMode들을 Lerp를 진행해준다.
+	// - 이에 대한 결과는 CameraModeView에 캐싱된다
+	FGeonCameraModeView CameraModeView;
+	CameraModeStack->EvaluateStack(DeltaTime, CameraModeView);
 }
 
 void UGeonCameraComponent::UpdateCameraModes()
@@ -36,7 +41,7 @@ void UGeonCameraComponent::UpdateCameraModes()
 	{
 		if (TSubclassOf<UGeonCameraMode> CameraMode = DetermineCameraModeDelegate.Execute())
 		{
-			//CameraModeStack->PushCameraMode(CameraMode);
+			CameraModeStack->PushCameraMode(CameraMode);
 		}
 	}
 }

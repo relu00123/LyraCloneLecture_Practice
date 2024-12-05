@@ -10,9 +10,9 @@
 /**
  * Controller에 바인딩된 CameraManager
  */
-#define HAK_CAMERA_DEFAULT_FOV (80.0f)
-#define HAK_CAMERA_DEFAULT_PITCH_MIN (-89.0f)
-#define HAK_CAMERA_DEFAULT_PITCH_MAX (89.0f)
+#define GEON_CAMERA_DEFAULT_FOV (80.0f)
+#define GEON_CAMERA_DEFAULT_PITCH_MIN (-89.0f)
+#define GEON_CAMERA_DEFAULT_PITCH_MAX (89.0f)
 
 /**
  * 
