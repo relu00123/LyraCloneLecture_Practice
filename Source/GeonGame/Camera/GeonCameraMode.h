@@ -17,7 +17,7 @@ struct FGeonCameraModeView
 {
 	FGeonCameraModeView();
 
-	//void Blend(const FGeonCameraModeView& Other, float OtherWeight);
+	void Blend(const FGeonCameraModeView& Other, float OtherWeight);
 
 	FVector Location;
 	FRotator Rotation;
@@ -98,7 +98,7 @@ public:
 	* EaseIn/Out에 사용한 Exponent
 	 */
 	UPROPERTY(EditDefaultsOnly, Category = "Blending")
-	float BlendExponent;
+	float BlendExponent; // 크면클수록 반영비율이 높아진다. 
 
 	/** Blend function */
 	EGeonCameraModeBlendFunction BlendFunction;

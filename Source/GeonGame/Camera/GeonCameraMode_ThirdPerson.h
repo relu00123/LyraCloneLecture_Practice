@@ -6,6 +6,8 @@
 #include "GeonCameraMode.h"
 #include "GeonCameraMode_ThirdPerson.generated.h"
 
+
+class UCurveVector;
 /**
  * 
  */
@@ -16,5 +18,16 @@ class GEONGAME_API UGeonCameraMode_ThirdPerson : public UGeonCameraMode
 
 	UGeonCameraMode_ThirdPerson(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
+
+	/**
+	* UGeonCameraMode's interface
+	*/
+	virtual void UpdateView(float DeltaTime) override;
+
+	/**
+	 * member variables
+	 */
+	UPROPERTY(EditDefaultsOnly, Category = "Third Person")
+	TObjectPtr<const UCurveVector> TargetOffsetCurve;
 	
 };
