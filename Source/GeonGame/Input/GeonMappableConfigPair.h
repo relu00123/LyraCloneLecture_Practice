@@ -2,9 +2,10 @@
 
 #pragma once
 
-#include "GeonMappableConfigPair.generated.h"
+ 
 
 #include "CoreMinimal.h"
+#include "GeonMappableConfigPair.generated.h"
 
  /** forward declaration */
 class UPlayerMappableInputConfig;

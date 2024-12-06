@@ -9,7 +9,7 @@
 #include "GeonHeroComponent.generated.h"
 
 
-struct FGeonMappableConfigPair;
+struct FInputActionValue;
 class UGeonCameraMode;
  
 
@@ -41,6 +41,9 @@ public:
 	
 	// Member methods
 	TSubclassOf<UGeonCameraMode> DetermineCameraMode() const;
+	void InitializePlayerInput(UInputComponent* PlayerInputComponent);
+	void Input_Move(const FInputActionValue& InputActionValue);
+	void Input_LookMouse(const FInputActionValue& InputActionValue);
 
 	// member variables 
 	UPROPERTY(EditAnywhere)

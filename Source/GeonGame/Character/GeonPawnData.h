@@ -7,6 +7,7 @@
 #include "GeonPawnData.generated.h"
 
 
+class UGeonInputConfig;
 class UGeonCameraMode;
 /**
  * 
@@ -25,5 +26,9 @@ public:
 	// Camera Mode
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Geon|Camera")
 	TSubclassOf<UGeonCameraMode> DefaultCameraMode;
+
+	/** input configuration used by player controlled pawns to create input mappings and bind input actions */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Geon|InputConfig")
+	TObjectPtr<UGeonInputConfig> InputConfig;
 
 };

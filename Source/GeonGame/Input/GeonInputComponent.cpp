@@ -3,3 +3,6 @@
 
 #include "GeonInputComponent.h"
 
+UGeonInputComponent::UGeonInputComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+}
