@@ -5,9 +5,13 @@
 #include "CoreMinimal.h"
 #include "Components/GameFrameworkInitStateInterface.h"
 #include "Components/PawnComponent.h"
+#include "GeonGame/Input/GeonMappableConfigPair.h"
 #include "GeonHeroComponent.generated.h"
 
+
+struct FGeonMappableConfigPair;
 class UGeonCameraMode;
+ 
 
 /**
   카메라, 입력 등 플레이어가 제어하는 시스템의 초기화를 처리하는 컴포넌트 
@@ -37,4 +41,9 @@ public:
 	
 	// Member methods
 	TSubclassOf<UGeonCameraMode> DetermineCameraMode() const;
+
+	// member variables 
+	UPROPERTY(EditAnywhere)
+	TArray<FGeonMappableConfigPair> DefaultInputConfigs;
+
 };

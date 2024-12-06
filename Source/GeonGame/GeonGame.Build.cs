@@ -17,7 +17,8 @@ public class GeonGame : ModuleRules
 			"GameplayTags",
 			"GameFeatures",
 			"EnhancedInput",
-			"ModularGameplay"
+			"ModularGameplay",
+			// Input
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
