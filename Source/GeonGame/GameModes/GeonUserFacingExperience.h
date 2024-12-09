@@ -6,6 +6,9 @@
 #include "Engine/DataAsset.h"
 #include "GeonUserFacingExperience.generated.h"
 
+class UCommonSession_HostSessionRequest;
+
+
 /**
  * 
  */
@@ -16,6 +19,9 @@ class GEONGAME_API UGeonUserFacingExperience : public UPrimaryDataAsset
 
 public:
 	// allowedTypes 를 지정하면 해당 Type? 만 지정할 수 있다. 
+
+	UFUNCTION(BlueprintCallable, BlueprintPure = false)
+	UCommonSession_HostSessionRequest* CreateHostingRequest() const;
 
 	// ** the specific map to load */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Experience, meta = (AllowedTypes = "Map"))

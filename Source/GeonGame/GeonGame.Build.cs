@@ -22,7 +22,7 @@ public class GeonGame : ModuleRules
             "InputCore",
             "EnhancedInput",
             // CommonUser
-            //"CommonUser",
+            "CommonUser",
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
