@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/GameStateComponent.h"
+#include "GameFeaturePluginOperationResult.h"
 #include "GeonExperienceManagerComponent.generated.h"
 
 class UGeonExperienceDefinition;
@@ -12,6 +13,7 @@ enum class EGeonExperienceLoadState
 {
 	Unloaded,
 	Loading,
+	LoadingGameFeatures,
 	Loaded,
 	Deactivating,
 };
@@ -39,6 +41,7 @@ public:
 	void ServerSetCurrentExperience(FPrimaryAssetId ExperienceId);
 	void StartExperienceLoad();
 	void OnExperienceLoadComplete();
+	void OnGameFeaturePluginLoadComplete(const UE::GameFeatures::FResult& Result);
 	void OnExperienceFullLoadCompleted();
 	const UGeonExperienceDefinition* GetCurrentExperienceChecked() const; 
 
@@ -53,4 +56,13 @@ public:
 
 	// Experience 로딩이 완료된 이후, Broadcasting Delegate
 	FOnGeonExperienceLoaded OnExperienceLoaded;
+
+
+	// 몇개의 GameFeature를 로딩을 할 것인가?
+	int32 NumGameFeaturePluginsLoading = 0;
+	TArray<FString> GameFeaturePluginURLs;
+
+
 };
+
+
