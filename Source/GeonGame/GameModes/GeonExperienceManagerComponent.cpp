@@ -5,6 +5,8 @@
 #include "GeonGame/System/GeonAssetManager.h"
 #include "GeonGame/GameModes/GeonExperienceDefinition.h"
 #include "GameFeaturesSubsystem.h"
+#include "GeonExperienceActionSet.h"
+#include "GameFeatureAction.h"
 #include "GameFeaturesSubsystemSettings.h"
 
 void UGeonExperienceManagerComponent::CallOrRegister_OnExperienceLoaded(FOnGeonExperienceLoaded::FDelegate&& Delegate)
@@ -177,10 +179,48 @@ void UGeonExperienceManagerComponent::OnExperienceFullLoadCompleted()
 {
 	check(LoadState != EGeonExperienceLoadState::Loaded);
 
+	// GameFeature Plugin의 로딩과 활성화 이후, GameFeature Action들을 활성화 시키자:
+	{
+		LoadState = EGeonExperienceLoadState::ExecutingActions;
+
+		// GameFeatureAction 활성화를 위한 Context 준비
+		FGameFeatureActivatingContext Context;
+		{
+			// 월드의 핸들을 세팅해준다
+			const FWorldContext* ExistingWorldContext = GEngine->GetWorldContextFromWorld(GetWorld());
+			if (ExistingWorldContext)
+			{
+				Context.SetRequiredWorldContextHandle(ExistingWorldContext->ContextHandle);
+			}
+		}
+
+		auto ActivateListOfActions = [&Context](const TArray<UGameFeatureAction*>& ActionList)
+			{
+				for (UGameFeatureAction* Action : ActionList)
+				{
+					// 명시적으로 GameFeatureAction에 대해 Registering -> Loading -> Activating 순으로 호출한다
+					if (Action)
+					{
+						Action->OnGameFeatureRegistering();
+						Action->OnGameFeatureLoading();
+						Action->OnGameFeatureActivating(Context);
+					}
+				}
+			};
+
+		// 1. Experience의 Actions
+		ActivateListOfActions(CurrentExperience->Actions);
+
+		// 2. Experience의 ActionSets
+		for (const TObjectPtr<UGeonExperienceActionSet>& ActionSet : CurrentExperience->ActionSets)
+		{
+			ActivateListOfActions(ActionSet->Actions);
+		}
+	}
+
 	LoadState = EGeonExperienceLoadState::Loaded;
 	OnExperienceLoaded.Broadcast(CurrentExperience);
-	OnExperienceLoaded.Clear(); // Delegate였음. 로딩이 완료가 되면 바로 실행 아니라면 델리게이트 신청해 줬었음 
-	// 두군대를 걸어 줬었는데 AGeonGameModeBase::
+	OnExperienceLoaded.Clear();
 }
 
 const UGeonExperienceDefinition* UGeonExperienceManagerComponent::GetCurrentExperienceChecked() const

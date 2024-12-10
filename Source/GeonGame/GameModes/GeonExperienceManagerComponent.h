@@ -14,6 +14,7 @@ enum class EGeonExperienceLoadState
 	Unloaded,
 	Loading,
 	LoadingGameFeatures,
+	ExecutingActions,
 	Loaded,
 	Deactivating,
 };

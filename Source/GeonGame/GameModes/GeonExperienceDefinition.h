@@ -7,6 +7,8 @@
 #include "GeonExperienceDefinition.generated.h"
 
 class UGeonPawnData;
+class UGameFeatureAction;
+class UGeonExperienceActionSet;
 
 /**
  * 
@@ -33,4 +35,14 @@ public:
 	 */
 	UPROPERTY(EditDefaultsOnly, Category=Gameplay)
 	TArray<FString> GameFeaturesToEnable;
+
+
+	/** ExperienceActionSet은 UGameFeatureAction의 Set이며, Gameplay 용도에 맞게 분류의 목적으로 사용한다 */
+	UPROPERTY(EditDefaultsOnly, Category = Gameplay)
+	TArray<TObjectPtr<UGeonExperienceActionSet>> ActionSets;
+
+	/** 일반적인 GameFeatureAction으로서 추가 */
+	UPROPERTY(EditDefaultsOnly, Instanced, Category = "Actions")
+	TArray<TObjectPtr<UGameFeatureAction>> Actions;
+
 };
