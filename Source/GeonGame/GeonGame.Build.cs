@@ -18,6 +18,7 @@ public class GeonGame : ModuleRules
             // Game Features
             "ModularGameplay",
             "GameFeatures",
+            "ModularGameplayActors",
             // Input
             "InputCore",
             "EnhancedInput",

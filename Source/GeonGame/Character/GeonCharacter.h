@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "ModularCharacter.h"
 #include "GeonCharacter.generated.h"
 
 class UGeonPawnExtensionComponent;
 class UGeonCameraComponent;
 
 UCLASS()
-class GEONGAME_API AGeonCharacter : public ACharacter
+class GEONGAME_API AGeonCharacter : public AModularCharacter
 {
 	GENERATED_BODY()
 

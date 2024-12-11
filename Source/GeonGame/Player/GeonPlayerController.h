@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "ModularPlayerController.h"
 #include "GeonPlayerController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GEONGAME_API AGeonPlayerController : public APlayerController
+class GEONGAME_API AGeonPlayerController : public AModularPlayerController
 {
 	GENERATED_BODY()
 
