@@ -21,6 +21,8 @@
 /** FeatureName 정의: static member variable 초기화 */
 const FName UGeonHeroComponent::NAME_ActorFeatureName("Hero");
 
+const FName UGeonHeroComponent::NAME_BindInputsNow("BindInputsNow");
+
 UGeonHeroComponent::UGeonHeroComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	PrimaryComponentTick.bStartWithTickEnabled = false;
@@ -259,7 +261,7 @@ void UGeonHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompo
 	}
 
 	// GameFeatureAction_AddInputConfig의 HandlePawnExtension 콜백 함수 전달
-	//UGameFrameworkComponentManager::SendGameFrameworkComponentExtensionEvent(const_cast<APawn*>(Pawn), NAME_BindInputsNow);
+	UGameFrameworkComponentManager::SendGameFrameworkComponentExtensionEvent(const_cast<APawn*>(Pawn), NAME_BindInputsNow);
 }
 
 void UGeonHeroComponent::Input_Move(const FInputActionValue& InputActionValue)
