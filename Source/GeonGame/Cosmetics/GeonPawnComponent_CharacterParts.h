@@ -46,6 +46,14 @@ struct FGeonCharacterPartList
 	{
 	}
 
+	bool SpawnActorForEntry(FGeonAppliedCharacterPartEntry& Entry);
+	void DestroyActorForEntry(FGeonAppliedCharacterPartEntry& Entry);
+
+	FGeonCharacterPartHandle AddEntry(FGeonCharacterPart NewPart);
+	void RemoveEntry(FGeonCharacterPartHandle Handle);
+
+	FGameplayTagContainer CollectCombinedTags() const;
+
 	/** 현재 인스턴스화된 Character Part */
 	UPROPERTY()
 	TArray<FGeonAppliedCharacterPartEntry> Entries;
@@ -68,6 +76,16 @@ class GEONGAME_API UGeonPawnComponent_CharacterParts : public UPawnComponent
 
 public:
 	UGeonPawnComponent_CharacterParts(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
+
+	USkeletalMeshComponent* GetParentMeshComponent() const;
+	USceneComponent* GetSceneComponentToAttachTo() const;
+
+	FGameplayTagContainer GetCombinedTags(FGameplayTag RequiredPrefix) const;
+	void BroadcastChanged();
+
+	FGeonCharacterPartHandle AddCharacterPart(const FGeonCharacterPart& NewPart);
+	void RemoveCharacterPart(FGeonCharacterPartHandle Handle);
 	
 	// 인스턴스화된 Character Parts
 	UPROPERTY()
